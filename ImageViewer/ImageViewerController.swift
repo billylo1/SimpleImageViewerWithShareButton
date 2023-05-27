@@ -94,8 +94,30 @@ private extension ImageViewerController {
         }
     }
     
-    @IBAction func closeButtonPressed() {
-        dismiss(animated: true)
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        
+        let senderButton = sender as! UIButton
+        
+        if senderButton.restorationIdentifier == "close" {
+            dismiss(animated: true)
+        }
+        
+        if senderButton.restorationIdentifier == "share" {
+            
+            guard imageView.image != nil else {
+                dismiss(animated: true)
+                return
+            }
+            
+            let uIActivityViewController = UIActivityViewController(activityItems: [
+                imageView.image as Any
+             ], applicationActivities: nil)
+             
+            uIActivityViewController.popoverPresentationController?.sourceView = senderButton
+
+            self.present(uIActivityViewController, animated: true, completion: nil)
+
+        }
     }
     
     @objc func imageViewDoubleTapped(recognizer: UITapGestureRecognizer) {
