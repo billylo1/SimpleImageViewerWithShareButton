@@ -108,9 +108,9 @@ private extension ImageViewerController {
                 dismiss(animated: true)
                 return
             }
-            
+            let dataImage = imageView.image!.jpegData(compressionQuality: 0.8)     // share requires JPEG or PNG only
             let uIActivityViewController = UIActivityViewController(activityItems: [
-                imageView.image as Any
+                dataImage as Any
              ], applicationActivities: nil)
              
             uIActivityViewController.popoverPresentationController?.sourceView = senderButton
