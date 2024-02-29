@@ -118,6 +118,11 @@ private extension ImageViewerController {
             self.present(uIActivityViewController, animated: true, completion: nil)
 
         }
+
+        if senderButton.restorationIdentifier == "delete" {
+            dismiss(animated: true)
+        }
+
     }
     
     @objc func imageViewDoubleTapped(recognizer: UITapGestureRecognizer) {

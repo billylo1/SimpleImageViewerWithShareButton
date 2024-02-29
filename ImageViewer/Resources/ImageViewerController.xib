@@ -42,10 +42,10 @@
                     <rect key="frame" x="169" y="315" width="37" height="37"/>
                 </activityIndicatorView>
                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="close" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsy-fe-raz" userLabel="CloseButton">
-                    <rect key="frame" x="125.5" y="583" width="44" height="44"/>
+                    <rect key="frame" x="77.5" y="567" width="60" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="bXU-O2-lam"/>
-                        <constraint firstAttribute="width" constant="44" id="xTg-TJ-eL3"/>
+                        <constraint firstAttribute="height" constant="60" id="bXU-O2-lam"/>
+                        <constraint firstAttribute="width" constant="60" id="xTg-TJ-eL3"/>
                     </constraints>
                     <state key="normal" image="CloseButton">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,10 +55,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="share" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRa-B2-CsQ" userLabel="ShareButton">
-                    <rect key="frame" x="205.5" y="583" width="44" height="44"/>
+                    <rect key="frame" x="157.5" y="567" width="60" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="44" id="kVc-5V-um5"/>
-                        <constraint firstAttribute="height" constant="44" id="r7q-JU-gDM"/>
+                        <constraint firstAttribute="width" constant="60" id="kVc-5V-um5"/>
+                        <constraint firstAttribute="height" constant="60" id="r7q-JU-gDM"/>
                     </constraints>
                     <state key="normal" image="ShareButton">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,27 +67,43 @@
                         <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="2Y2-Gh-8UQ"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="delete" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3k-39-4WV" userLabel="DeleteButton">
+                    <rect key="frame" x="237.5" y="567" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="4H7-H6-hnA"/>
+                        <constraint firstAttribute="width" constant="60" id="i06-8H-mff"/>
+                    </constraints>
+                    <state key="normal" image="DeleteButton">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="mQL-vW-x1y"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="oPl-2f-Knx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4hr-Ua-OMa"/>
                 <constraint firstItem="cQD-2Q-pvo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ErM-q5-uey"/>
                 <constraint firstAttribute="bottom" secondItem="Wsy-fe-raz" secondAttribute="bottom" constant="40" id="K5F-Q6-Jvz"/>
-                <constraint firstItem="xRa-B2-CsQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="40" id="RTL-Kg-8FH"/>
+                <constraint firstAttribute="bottom" secondItem="Q3k-39-4WV" secondAttribute="bottom" constant="40" id="LJo-G0-hG6"/>
+                <constraint firstItem="xRa-B2-CsQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RTL-Kg-8FH"/>
+                <constraint firstItem="Q3k-39-4WV" firstAttribute="leading" secondItem="xRa-B2-CsQ" secondAttribute="trailing" constant="20" id="TYg-x8-Taq"/>
                 <constraint firstItem="rHA-5m-kkS" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Zh5-4A-UbJ"/>
                 <constraint firstAttribute="trailing" secondItem="cQD-2Q-pvo" secondAttribute="trailing" id="fiR-iH-AGe"/>
                 <constraint firstAttribute="bottom" secondItem="xRa-B2-CsQ" secondAttribute="bottom" constant="40" id="hp0-Pj-6H9"/>
                 <constraint firstAttribute="bottom" secondItem="cQD-2Q-pvo" secondAttribute="bottom" id="kQk-Ie-iGl"/>
                 <constraint firstItem="oPl-2f-Knx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lBh-77-nAV"/>
                 <constraint firstItem="cQD-2Q-pvo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lTy-Fb-3fn"/>
-                <constraint firstItem="Wsy-fe-raz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-40" id="rn8-bp-cdj"/>
                 <constraint firstItem="rHA-5m-kkS" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="tGF-Ia-4A0"/>
+                <constraint firstItem="xRa-B2-CsQ" firstAttribute="leading" secondItem="Wsy-fe-raz" secondAttribute="trailing" constant="20" id="uGJ-5t-TpJ"/>
             </constraints>
             <point key="canvasLocation" x="53.600000000000001" y="49.025487256371818"/>
         </view>
     </objects>
     <resources>
         <image name="CloseButton" width="514" height="514"/>
+        <image name="DeleteButton" width="514" height="514"/>
         <image name="ShareButton" width="514" height="514"/>
     </resources>
 </document>
